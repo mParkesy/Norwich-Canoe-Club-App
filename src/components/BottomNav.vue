@@ -34,6 +34,13 @@
           <span>Paddle Spots</span>
           <v-icon>mdi-map-marker-check</v-icon>
         </v-btn>
+        <v-btn 
+          value="socials"
+          :to="{ name: 'Socials' }"
+        >
+          <span>Socials</span>
+          <v-icon>mdi-account-supervisor</v-icon>
+        </v-btn>
       </v-bottom-navigation>
     </div>
 </template>
