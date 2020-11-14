@@ -55,7 +55,7 @@ export default {
       sessions: [],
     }),
   mounted () {
-    this.$http.get("https://www.sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/sessions?per_page=100")
+    this.$http.get("https://sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/sessions?per_page=100")
     .then((result) => {
       this.sessions = result.data
     })

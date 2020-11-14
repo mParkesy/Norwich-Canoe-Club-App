@@ -53,7 +53,7 @@
       loaded: false
     }),
     mounted () {
-      this.$http.get("https://www.sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/sessions/"+this.id)
+      this.$http.get("https://sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/sessions/"+this.id)
       .then((result) => {
         this.session = result.data;
         if(this.session.acf.youtube_url != ""){

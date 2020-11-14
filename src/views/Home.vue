@@ -41,8 +41,9 @@
           >
             <v-card-title>Atlantic Crossing</v-card-title>
             <v-card-text class="text--primary">
-              <h3>Our Monthly Goal is: {{ goal }} miles</h3>
-              <h3>We are currently at {{ total }} miles</h3>
+              <p>Our Atlantic crossing challenge from Spring 2020.</p>
+              <h3>Our Monthly Goal was: {{ goal }} miles</h3>
+              <h3>We got to {{ total }} miles</h3>
               <div class="mt-4"></div>
               <v-progress-linear
                   :active="active"
@@ -59,7 +60,7 @@
                   :value="value"
                   color="#008000"
               ></v-progress-linear>
-              <p class="mt-4 mb-0">Keep adding your miles to the form on the Club Goal page.</p>
+              <!-- <p class="mt-4 mb-0">Keep adding your miles to the form on the Club Goal page.</p> -->
             </v-card-text>
           </v-card>
         </v-col>
@@ -94,13 +95,13 @@ export default {
       loaded: false
     }),
   mounted () {
-    this.$http.get("https://www.sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/sessions")
+    this.$http.get("https://sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/sessions")
     .then((result) => {
     
       this.sessions = result.data
     })
     this.total = 0;
-    this.$http.get("https://www.sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/mileage?per_page=100")
+    this.$http.get("https://sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/mileage?per_page=100")
     .then((result) => {
         this.entries = result.data;
         for(var i = 0; i < this.entries.length; i++){

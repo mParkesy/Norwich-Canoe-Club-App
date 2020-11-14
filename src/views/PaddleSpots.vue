@@ -95,7 +95,7 @@ export default {
   },
   mounted () {
       this.rivers.push("All")
-    this.$http.get("https://www.sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/spots?per_page=100")
+    this.$http.get("https://sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/spots?per_page=100")
     .then((response) => {
         var arr = response.data
         var latlong = [];

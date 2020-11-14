@@ -13,13 +13,13 @@
           <span>Home</span>
           <v-icon>mdi-home</v-icon>
         </v-btn>
-        <v-btn 
+        <!-- <v-btn 
           value="atlantic"
           :to="{ name: 'Club Goal' }"
         >
           <span>Club Goal</span>
           <v-icon>mdi-timer-sand</v-icon>
-        </v-btn>
+        </v-btn> -->
         <v-btn 
           value="sessions"
           :to="{ name: 'Sessions' }"

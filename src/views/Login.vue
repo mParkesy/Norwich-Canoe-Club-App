@@ -82,7 +82,7 @@ export default {
             bodyFormData.set('username', this.name);
             bodyFormData.set('password', this.password);
             this.$http.post(
-                "https://www.sessions.norwichcanoeclub.co.uk/login.php", 
+                "https://sessions.norwichcanoeclub.co.uk/login.php", 
                 bodyFormData
             ).then((response) => {
                 console.log(response)

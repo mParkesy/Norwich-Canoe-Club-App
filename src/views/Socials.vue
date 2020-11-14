@@ -49,7 +49,7 @@ export default {
       socials: [],
     }),
   mounted () {
-    this.$http.get("https://www.sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/social")
+    this.$http.get("https://sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/social")
     .then((result) => {
         this.socials = result.data
     })

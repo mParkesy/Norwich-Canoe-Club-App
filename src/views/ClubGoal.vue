@@ -179,7 +179,7 @@
     methods: {
         updateProgress(){
             this.total = 0;
-            this.$http.get("https://www.sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/mileage?per_page=100")
+            this.$http.get("https://sessions.norwichcanoeclub.co.uk/wp-json/wp/v2/mileage?per_page=100")
             .then((result) => {
                 this.entries = result.data;
                 for(var i = 0; i < this.entries.length; i++){
@@ -207,7 +207,7 @@
                     bodyFormData.set('mileage', distance);
                     bodyFormData.set('ip', result.data.ip)
                     this.$http.post(
-                        "https://www.sessions.norwichcanoeclub.co.uk/new-mileage.php", 
+                        "https://sessions.norwichcanoeclub.co.uk/new-mileage.php", 
                         bodyFormData
                     ).then((response) => {
                         if(response.data.success == true){
